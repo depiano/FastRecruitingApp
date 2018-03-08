@@ -1,0 +1,14 @@
+
+    <ion-list>
+        <ion-item-sliding *ngFor="let offerta of jobsofferlist" (click)="selezione(offerta, offerta.$key, offerta.titolo)">
+                 <ion-item>
+                     <ion-avatar item-start>
+                         <img src="assets/imgs/job.png">
+                     </ion-avatar>
+                     <h1>{{offerta.$key}}</h1>
+                     <h2> {{ offerta.titolo }}</h2>
+
+                  </ion-item>
+
+        </ion-item-sliding>
+    </ion-list>

@@ -1,0 +1,90 @@
+<!-- Generated template for the DettagliocandidatoComponent component -->
+<div *ngIf="candidaturaselezionata">
+
+
+
+
+        <h4 text-center>{{candidaturaselezionata.fullnameCandidato}}</h4>
+
+        <h6>
+          Skill possedute:
+        </h6>
+        <p *ngFor=" let skill of listSkill">
+          {{skill.nome}}
+        </p>
+
+  <button ion-button (click)="onVisualizzaOfferta()" block>Visualizza offerta</button>
+
+
+        <ion-row>
+
+          <ion-col>   <a target="_blank" href="{{candidaturaselezionata.cv}}"> <button ion-button icon-right round block>CV<ion-icon name="document"></ion-icon></button></a>
+          </ion-col>
+
+          <ion-col>
+              <a target="_blank" href="{{candidaturaselezionata.lett_presentazione}}"><button ion-button icon-right round block>Lettera<ion-icon name="mail"></ion-icon></button> </a>
+          </ion-col>
+
+        </ion-row>
+
+        <br>
+        <h4>
+          Note Recruiter:
+        </h4>
+        <p>
+          {{candidaturaselezionata.note_recruiter}}
+        </p>
+
+  </div>
+
+    <ion-list radio-group  [(ngModel)]="giudizio">
+      <ion-list-header>
+        Giudizio
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Idoneo</ion-label>
+        <ion-radio checked="true" value="idoneo"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Non idoneo</ion-label>
+        <ion-radio value="nonidoneo"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Da verificare</ion-label>
+        <ion-radio value="verificare" ></ion-radio>
+      </ion-item>
+    </ion-list>
+
+    <br>
+    <h4>
+      Note:
+    </h4>
+<ion-card>
+    <ion-textarea name="note" rows="10" [(ngModel)]="noteTecnico">
+    </ion-textarea>
+</ion-card>
+    <ion-row>
+
+      <ion-col>
+        <button ion-button (click)="onAnnulla()" color="danger" block>Annulla</button>
+      </ion-col>
+
+      <ion-col>
+        <button ion-button (click)="onInvia()" color="secondary" block>Invia</button>
+      </ion-col>
+
+    </ion-row>
+
+
+
+
+
+
+
+
+
+
+

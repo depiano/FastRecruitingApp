@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content scroll="false">
+  <div class="splash-bg"></div>
+  <div class="splash-info">
+    <div class="splash-logo"></div>
+    <div class="splash-intro">
+      Fast Recruiting NexSoft S.p.a.
+
+    </div>
+  </div>
+  <div padding>
+      <ion-list>
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="candidato.email" placeholder="Email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="password" [(ngModel)]="candidato.password" placeholder="Password"></ion-input>
+        </ion-item>
+
+      </ion-list>
+    <button ion-button block (click)="onLogin()"  color="secondary">Login</button>
+    <button ion-button block (click)="onSignup()">Registrati</button>
+
+  </div>
+</ion-content>

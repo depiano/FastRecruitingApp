@@ -1,0 +1,43 @@
+<div *ngIf="offertaselezionata" style="margin-top:5%;">
+    <div >
+        <h1>{{offertaselezionata.titolo}}</h1>
+        <p>
+            {{offertaselezionata.annuncio}}
+        </p>
+        <h6>
+            Competenze richieste:
+        </h6>
+        <p *ngFor=" let skill of listSkill">
+            {{skill.nome}}
+        </p>
+        <h6>
+            Titolo di studio:
+        </h6>
+        <p>
+            {{offertaselezionata.titolodistudio}}
+        </p>
+        <h6>
+            Luogo di lavoro:
+        </h6>
+        <p>
+            {{offertaselezionata.luogodilavoro}}
+        </p>
+
+        <div padding>
+            <ion-row responsive-sm>
+                <ion-col>
+                    <button ion-button (click)="onAnnulla()" color="danger" block>Annulla</button>
+                </ion-col>
+                <ion-col>
+                    <button ion-button (click)="onTapCandidati()" color="secondary"  block>Candidati</button>
+                </ion-col>
+
+            </ion-row>
+        </div>
+
+
+
+
+
+    </div>
+</div>

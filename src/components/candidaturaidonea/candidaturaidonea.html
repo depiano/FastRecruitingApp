@@ -1,0 +1,13 @@
+
+    <ion-item *ngFor="let candidatura of candidaturalist" (click)="selezione(candidatura,candidatura.$key)">
+      <ion-avatar item-start>
+        <img src="assets/imgs/jobverde.png">
+      </ion-avatar>
+      <h3>{{candidatura.titoloOfferta}}</h3>
+      <h5> Candidatura idonea</h5>
+      <p>Visualizza colloquio</p>
+    </ion-item>
+
+
+
+

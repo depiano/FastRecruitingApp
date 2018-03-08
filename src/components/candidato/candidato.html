@@ -1,0 +1,15 @@
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let candidatura of candidatilist" (click)="selezione(candidatura, candidatura.$key)">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/imgs/profilo.png">
+        </ion-avatar>
+        <h2> {{ candidatura.titoloOfferta }}</h2>
+        <h3>{{candidatura.fullnameCandidato}}</h3>
+
+      </ion-item>
+
+
+    </ion-item-sliding>
+  </ion-list>

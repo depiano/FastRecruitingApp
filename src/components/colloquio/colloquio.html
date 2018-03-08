@@ -1,0 +1,75 @@
+<!-- Generated template for the ColloquioComponent component -->
+<div *ngIf="candidaturaselezionata">
+  {{chiave}}
+
+    <ion-grid align="center">
+        <ion-row>
+            <ion-col>
+                <h6>{{offertadilavoro.titolo}} </h6>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <h6 *ngFor="let skill of list" >{{skill.nome}} </h6>
+            </ion-col>
+        </ion-row>
+
+
+        <ion-row>
+            <ion-col>
+                <h6>{{offertadilavoro.annuncio}}</h6>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <h6>{{offertadilavoro.titolodistudio}}</h6>
+            </ion-col>
+        </ion-row>
+
+
+
+        <ion-row>
+            <ion-col>
+                <h6>{{offertadilavoro.luogodilavoro}}</h6>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+    <ion-grid align="center" *ngIf="alert">
+
+        <ion-row>
+            <ion-col>
+                <h4>Informazioni sul colloquio</h4>
+            </ion-col>
+        </ion-row>
+
+
+
+        <ion-row>
+            <ion-col>
+                <h4>Data:</h4>
+                {{candidaturaselezionata.data_colloquio}}
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <h4>Orario:</h4>
+                {{candidaturaselezionata.orario_colloquio}}
+            </ion-col>
+        </ion-row>
+
+
+        <ion-row>
+            <ion-col>
+                <h4>Luogo colloquio:</h4>
+                <a target="_blank" href="{{candidaturaselezionata.google_maps}}"> {{candidaturaselezionata.luogo_colloquio}}</a>
+            </ion-col>
+        </ion-row>
+
+
+    </ion-grid>
+</div>

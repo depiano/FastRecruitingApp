@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profilo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="speaker-detail">
+  <div text-center>
+    <img src="assets/imgs/profilo.png" alt="Immagine profilo"><br>
+
+    <ion-label>{{fullname}}</ion-label>
+    <ion-label>{{email}}</ion-label>
+    <ion-label>{{telefono}}</ion-label>
+
+    <ion-buttons>
+      <button ion-button (click)="onSignup()" small>Modifica</button>
+    </ion-buttons>
+
+
+  </div>
+
+
+</ion-content>

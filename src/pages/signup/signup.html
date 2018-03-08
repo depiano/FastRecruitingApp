@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Registrazione</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="login-page">
+
+
+
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" name="fullname" [(ngModel)]="candidato.fullname" placeholder="Fullname" required></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="candidato.email" placeholder="Email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="candidato.telefono" placeholder="Telefono"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-input type="password" [(ngModel)]="candidato.password" placeholder="Password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" [(ngModel)]="confermaPassword" placeholder="Conferma password"></ion-input>
+      </ion-item>
+
+
+    </ion-list>
+
+    <div padding>
+      <ion-row responsive-sm>
+        <ion-col>
+          <button ion-button (click)="onAnnulla()" color="danger" block>Annulla</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button (click)="onControlData()" color="secondary"  block>Conferma</button>
+        </ion-col>
+
+      </ion-row>
+    </div>
+
+
+</ion-content>

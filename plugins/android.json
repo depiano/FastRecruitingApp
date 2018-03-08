@@ -1,0 +1,39 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "io.ionic.fastrecruiting"
+        },
+        "cordova-plugin-firebase": {
+            "PACKAGE_NAME": "io.ionic.fastrecruiting"
+        },
+        "cordova-plugin-ionic-webview": {
+            "PACKAGE_NAME": "io.ionic.fastrecruiting"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "io.ionic.fastrecruiting"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.ionic.fastrecruiting"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "io.ionic.fastrecruiting"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "io.ionic.fastrecruiting"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "io.ionic.fastrecruiting"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "io.ionic.fastrecruiting"
+        }
+    },
+    "dependent_plugins": {}
+}

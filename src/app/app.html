@@ -1,0 +1,52 @@
+<ion-menu [content]="content" id="candidato">
+
+  <ion-header>
+    <ion-avatar item-start>
+      <div class="logo">
+        <img src="assets/imgs/logoApp.png">
+        <h4>{{fullname}}</h4>
+        <h6>{{email}}</h6>
+
+
+      </div>
+    </ion-avatar>
+
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pagesCandidato" (click)="openPage(p)">
+        <ion-icon item-start [name]="p.icon" ></ion-icon>
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-menu [content]="content" id="tecnico">
+
+  <ion-header>
+    <ion-avatar item-start>
+      <div class="logo">
+        <img src="assets/imgs/logoApp.png">
+        <h4>{{fullname}}</h4>
+        <h6>{{email}}</h6>
+
+
+      </div>
+    </ion-avatar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pagesTecnico" (click)="openPage(p)">
+        <ion-icon item-start [name]="p.icon" ></ion-icon>
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

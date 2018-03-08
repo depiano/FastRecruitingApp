@@ -1,0 +1,32 @@
+
+<ion-content no-bounce>
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
+
+    <ion-slide>
+      <img src="assets/imgs/logoApp.png" class="slide-image"/>
+      <h2 class="slide-title">
+        Benvenuti in <b>Fast Recruiting</b>
+      </h2>
+      <p>
+        L'app per essere continuamente aggiornati sulle offerte di lavoro della <b>NexSoft S.p.a.</b>
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/imgs/nexsoft1.png" class="slide-image"/>
+      <p>La storia della <b>Nexsoft S.p.A.</b> inizia nel Luglio 2004. Fin dalla nascita, l'obiettivo della creazione dell'azienda è stato quello di perseguire una logica particolarmente mirata ad alcuni settori di mercato e finalizzata alla capitalizzazione di attività d'investimento nella ricerca applicata. Attualmente il core business della società è costituito dai servizi informatici ad ampio raggio e, in particolare, dalla consulenza a clienti nel settore dell’ITC. L’elevato e vasto know-how acquisito dalla NEXSOFT in tale settore nei campi della consulenza, dell’outsourcing, del “solution management” e della fornitura di applicazioni, infrastrutture e servizi, permette di offrire le soluzioni più innovative, rispondendo sempre in maniera immediata alle esigenze dei propri Clienti, sia nel settore pubblico che in quello privato.</p>
+    </ion-slide>
+
+
+
+    <ion-slide>
+      <img src="assets/imgs/corporate.png" class="slide-image"/>
+      <h2 class="slide-title">Sei pronto ad iniziare?</h2>
+      <button ion-button icon-end large clear (click)="startApp()">
+        Continua
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

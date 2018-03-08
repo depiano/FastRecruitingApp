@@ -1,0 +1,58 @@
+<div>
+  <h6>
+    Titolo di studio:
+  </h6>
+  <ion-item>
+    <ion-input type="text" name="titolo" [(ngModel)]="candidatura.titolodistudio" placeholder="Titolo di studio"></ion-input>
+  </ion-item>
+  <h6>
+    Skill possedute:
+  </h6>
+  <ion-list>
+    <ion-item>
+      <ion-label>Skill possedute</ion-label>
+      <ion-select [(ngModel)]="candidatura.skill" multiple="true" okText="Fatto">
+        <ion-option *ngFor="let skill of listSkill" >{{skill.nome}}</ion-option>
+
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <h6>
+    Note:
+  </h6>
+    <ion-card>
+    <ion-textarea type="text" name="note" rows="10" [(ngModel)]="candidatura.note_candidato" placeholder="Inserisci note"></ion-textarea>
+    </ion-card>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-right round block (click)="getPicture(0)">CV<ion-icon name="document"></ion-icon></button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-right round block (click)="getPicture1(0)">Lettera<ion-icon name="mail"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+
+  <ion-card>
+    <img [src]="captureDataUrl" *ngIf="caricato"/>
+    <button ion-button (click)="upload()" *ngIf="captureDataUrl">Conferma</button>
+    <button ion-button (click)="calcola()" *ngIf="caricato">Carica</button>
+  </ion-card>
+
+  <ion-card>
+    <img [src]="captureDataUrl1" *ngIf="caricato1"/>
+    <button ion-button (click)="upload1()" *ngIf="captureDataUrl1">Conferma</button>
+    <button ion-button (click)="calcola1()" *ngIf="caricato1">Carica</button>
+  </ion-card>
+
+  <div padding>
+    <ion-row>
+      <ion-col>
+        <button ion-button (click)="onAnnulla()" color="danger" block>Annulla</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button (click)="onTapCandidati()" color="secondary" block>Candidati</button>
+      </ion-col>
+    </ion-row>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Offerta</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="offertaselezionata">
+    <div >
+      <h1>{{offertaselezionata.titolo}}</h1>
+      <br>
+      <p>
+        {{offertaselezionata.annuncio}}
+      </p>
+      <h6>
+        Competenze richieste:
+      </h6>
+      <p *ngFor=" let skill of listSkill">
+        {{skill.nome}}
+      </p>
+      <h6>
+        Titolo di studio:
+      </h6>
+      <p>
+        {{offertaselezionata.titolodistudio}}
+      </p>
+      <h6>
+        Luogo di lavoro:
+      </h6>
+      <p>
+        {{offertaselezionata.luogodilavoro}}
+      </p>
+
+
+
+
+    </div>
+  </div>
+</ion-content>
