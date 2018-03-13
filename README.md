@@ -35,7 +35,7 @@ Angular4, NodeJS, Ionic, Cordova, Bootstrap, Firebase & AngularFire2
 Clona il progetto FastRecruiting
 
 ```
-clone ....
+git clone https://github.com/depiano/FastRecruitingApp.git
 ```
 
 Installa i pacchetti
@@ -47,7 +47,7 @@ npm install
 Esegui
 
 ```
-ng serve --open
+ionic serve --open
 ```
 
 ## Authors
